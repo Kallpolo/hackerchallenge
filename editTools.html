@@ -1,0 +1,196 @@
+<div id="editWrapper">
+    <div id="floatForm">
+    	<input id='toggleShowOption' name="toggleOption" type="button" value="Hide Edit Option" />
+        
+        <div id="editOption">
+			<br/>
+        	<div id="actionWrapper">
+                Select stages:<br/>
+                <select id="challengelist" name="challengelist">
+                </select><br/>
+                <input id="prevStage" name="prevStage" class="button" type="button" value="Prev Stage">
+                <input id="nextStage" name="nextStage" class="button" type="button" value="Next Stage">
+                <br/><br/>
+                <input id="removeStage" name="removeStage" type="button" value="Remove Stage">
+				<input id="moveStageUp" name="moveStageUp" type="button" value="Move Stage Up">
+                <input id="moveStageDown" name="moveStageDown" type="button" value="Move Stage Down">
+                <input id="addNewStage" name="addNewStage" type="button" value="Add New Stage">
+            	<br/><br/>
+                Edit stage:<br/>
+                <input id='editArea' name="editArea" type="button" value="Edit Area" />
+            	<input id='editHub' name="editHub" type="button" value="Edit Hub" />
+                <input id='editLines' name="editLines" type="button" value="Edit Lines" />
+                <br/><br/>
+                Test play, generate and replace array:<br/>
+                <input id='testPlay' name="testPlay" type="button" value="Test Play" />
+                <input id='generateArray' name="generateArray" type="button" value="Generate Array" />
+                <textarea id="outputArray" name="outputArray" cols="" rows="10"></textarea>
+        	</div>
+            
+            <div id="playWrapper">
+            	<br/>
+            	<input id='stopTestPlay' name="stopTestPlay" type="button" value="Stop Play" />
+            </div>
+            
+            <div id="editAreaWrapper" style="display:none;">
+            	Edit stage:
+            	<div class="formRow">
+                    <label class="button">Width:</label>
+                    <input id="stageW" name="stageW" class="button" type="text" value="1280">
+                </div>
+                <div class="formRow">
+                    <label class="button">Height:</label>
+                    <input id="stageH" name="stageH" class="button" type="text" value="768">
+                </div>
+                <br/>
+                Position to start the game when your puzzle dimension is larger than original game size (1280 x 768):<br/><br/>
+                <div class="formRow">
+                    <label class="button">Position X:</label>
+                    <input id="startX" name="startX" class="button" type="text" value="0">
+                </div>
+                <div class="formRow">
+                    <label class="button">Position Y:</label>
+                    <input id="startY" name="startY" class="button" type="text" value="0">
+                </div>
+                <input id='loadStartPos' name="loadStartPos" type="button" value="Load Current Position" />
+                <br/><br/>
+                Move the stage to set new position:
+                <input id='loadCurrentPos' name="loadCurrentPos" type="button" value="Set New Position" />
+                <br/><br/>
+                <input id='doneStage' name="doneStage" type="button" value="Done" />
+            </div>
+            
+            <div id="editHubWrapper" style="display:none;">
+            	Select hubs or click any hubs on stage to edit:
+                <select id="hublist" name="hublist">
+                </select>
+                <input id="prevHub" name="prevHub" class="button" type="button" value="Prev Hub">
+                <input id="nextHub" name="nextHub" class="button" type="button" value="Next Hub">
+                <br/><br/>
+                <input id="removeHub" name="removeHub" type="button" value="Remove Hub">
+                <input id="addHub" name="addHub" type="button" value="Add Hub">
+                <br/><br/>
+                <div class="formRow">
+                    <label class="button">Type:</label>
+                    <select id="hubtype" name="hubtype" class="button">
+                	</select>
+                </div>
+                <div class="huboption">
+                	<div class="formRow">
+                        <label class="button">Level:</label>
+                        <select id="hubtrick" name="hubtrick" class="button">
+                        	<option value="0">None</option>
+                        	<option value="1">Lock</option>
+                            <option value="2">Timer</option>
+                        </select>
+                    </div>
+                    <div class="hubTimerOption">
+                        <div class="formRow">
+                            <label class="button">Timer:</label>
+                            <input id="hubTimer" name="hubTimer" class="button" type="text" value="">
+                        </div>
+                    </div>
+                    <div class="hubLockOption">
+                        <div class="formRow">
+                            <label class="button">Lock Top:</label>
+                            <select id="hublocktop" name="hublocktop" class="button">
+                                <option value="0">false</option>
+                                <option value="1">true</option>
+                            </select>
+                        </div>
+                        <div class="formRow">
+                            <label class="button">Lock Right:</label>
+                            <select id="hublockright" name="hublockright" class="button">
+                                <option value="0">false</option>
+                                <option value="1">true</option>
+                            </select>
+                        </div>
+                        <div class="formRow">
+                            <label class="button">Lock Bottom:</label>
+                            <select id="hublockbottom" name="hublockbottom" class="button">
+                                <option value="0">false</option>
+                                <option value="1">true</option>
+                            </select>
+                        </div>
+                        <div class="formRow">
+                            <label class="button">Lock Left:</label>
+                            <select id="hublockleft" name="hublockleft" class="button">
+                                <option value="0">false</option>
+                                <option value="1">true</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="formRow">
+                    <label class="button">Position X:</label>
+                    <input id="hubX" name="hubX" class="button" type="text" value="500">
+                </div>
+                <div class="formRow">
+                    <label class="button">Position Y:</label>
+                    <input id="hubY" name="hubY" class="button" type="text" value="500">
+                </div>
+                <div class="formRow">
+                    <label class="button">Rotation:</label>
+                    <select id="hubRotation" name="hubRotation" class="button">
+                    </select>
+                </div>
+                <br/>
+                <input id='doneHub' name="doneHub" type="button" value="Done" />
+            </div>
+            
+            <div id="editAddHubWrapper" style="display:none;">
+            	Click on stage to add new hub:<br/><br/>
+                
+                <input id='doneAddHub' name="doneAddHub" type="button" value="Done" />
+            </div>
+            
+            <div id="editLinesWrapper" style="display:none;">
+            	Select connecting lines to edit:
+                <select id="linelist" name="linelist">
+                </select>
+                <input id="prevLine" name="prevLine" class="button" type="button" value="Prev Line">
+                <input id="nextLine" name="nextLine" class="button" type="button" value="Next Line">
+                <br/><br/>
+                <input id="removeLine" name="removeLine" type="button" value="Remove Line">
+                <input id="addLine" name="addLine" type="button" value="Add New Line">
+                <br/><br/>
+				
+				<div id="editPointWrapper">
+					Select points to edit:
+					<select id="pointlist" name="pointlist">
+					</select>
+					<input id="prevPoint" name="prevPoint" class="button" type="button" value="Prev Point">
+					<input id="nextPoint" name="nextPoint" class="button" type="button" value="Next Point">
+					<br/><br/>
+					<input id="removePoint" name="removePoint" type="button" value="Remove Point">
+					<input id="addPoint" name="addPoint" type="button" value="Add Point">
+					<br/><br/>
+					<div class="formRow">
+						<label class="button">Position X:</label>
+						<input id="pointX" name="pointX" class="button" type="text">
+					</div>
+					<div class="formRow">
+						<label class="button">Position Y:</label>
+						<input id="pointY" name="pointY" class="button" type="text">
+					</div>
+				</div>
+                <br/>
+                <input id='doneEditLine' name="doneEditLine" type="button" value="Done" />
+            </div>
+            
+            <div id="editAddLineWrapper" style="display:none;">
+            	To draw a line from one hub to another hub:<br/><br/>
+                1) First you must select a hub available start points (white point around the hub) to begin<br/><br/>
+                2) Once start you can connect to another hub ending points (white point around the hub)<br/><br/>
+                <input id='doneAddLine' name="doneAddLine" type="button" value="Done" />
+            </div>
+            
+            <div id="editAddPointWrapper" style="display:none;">
+            	Click on stage to add new point:<br/><br/>
+                
+                <input id='doneAddPoint' name="doneAddPoint" type="button" value="Done" />
+            </div>
+            
+        </div>
+    </div>
+</div>
